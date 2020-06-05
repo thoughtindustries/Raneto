@@ -27,6 +27,8 @@ function extractProfile (profile) {
   }
   if (profile._json && profile._json.domain) {
     domain = profile._json.domain;
+  } else if (profile._json && profile._json.hd) {
+    domain = profile._json.hd;
   }
   return {
     id: profile.id,
